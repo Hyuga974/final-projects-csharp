@@ -133,7 +133,8 @@ namespace csharp_project
                 case '/':
                     if (nb == 0)
                     {
-                        entry.Text = "Division by 0 is impossible";
+                        player.Play("./assset/sound/alarm-police-fire-ambulance-etc-sound-effect-26-11504.mp3");
+                        return "Division by 0 is impossible";
                     } else {
                         resInt /= nb;
                     }
@@ -141,7 +142,8 @@ namespace csharp_project
                 case '%':
                     if (nb == 0)
                     {
-                        entry.Text = "Division by 0 is impossible";
+                        player.Play("./assset/sound/alarm-police-fire-ambulance-etc-sound-effect-26-11504.mp3");
+                        return "Division by 0 is impossible";
                     } else {
                         resInt %= nb;
                     }
@@ -157,7 +159,7 @@ namespace csharp_project
 
         private void ButtonPoint_Clicked(object sender, EventArgs e)
         {
-            if (result.Text == "0")
+            if (result.Text == "0" || result.Text == "Division by 0 is impossible")
             {
                 result.Text = "";
             }
@@ -173,7 +175,7 @@ namespace csharp_project
         }
         private void ButtonOne_Clicked(object sender,EventArgs e)
         {
-            if (result.Text == "0")
+            if (result.Text == "0" || result.Text == "Division by 0 is impossible")
             {
                 result.Text = "";
             }
@@ -185,7 +187,7 @@ namespace csharp_project
         }
         private void ButtonTwo_Clicked(object sender, EventArgs e)
         {
-            if (result.Text == "0")
+            if (result.Text == "0" || result.Text == "Division by 0 is impossible")
             {
                 result.Text = "";
             }
@@ -197,7 +199,7 @@ namespace csharp_project
         }
         private void ButtonThree_Clicked(object sender, EventArgs e)
         {
-            if (result.Text == "0")
+            if (result.Text == "0" || result.Text == "Division by 0 is impossible")
             {
                 result.Text = "";
             }
@@ -209,7 +211,7 @@ namespace csharp_project
         }
         private void ButtonFour_Clicked(object sender, EventArgs e)
         {
-            if (result.Text == "0")
+            if (result.Text == "0" || result.Text == "Division by 0 is impossible")
             {
                 result.Text = "";
             }
@@ -221,7 +223,7 @@ namespace csharp_project
         }
         private void ButtonFive_Clicked(object sender, EventArgs e)
         {
-            if (result.Text == "0")
+            if (result.Text == "0" || result.Text == "Division by 0 is impossible")
             {
                 result.Text = "";
             }
@@ -233,7 +235,7 @@ namespace csharp_project
         }
         private void ButtonSix_Clicked(object sender, EventArgs e)
         {
-            if (result.Text == "0")
+            if (result.Text == "0" || result.Text == "Division by 0 is impossible")
             {
                 result.Text = "";
             }
@@ -245,7 +247,7 @@ namespace csharp_project
         }
         private void ButtonSeven_Clicked(object sender, EventArgs e)
         {
-            if (result.Text == "0")
+            if (result.Text == "0" || result.Text == "Division by 0 is impossible")
             {
                 result.Text = "";
             }
@@ -257,7 +259,7 @@ namespace csharp_project
         }
         private void ButtonEight_Clicked(object sender, EventArgs e)
         {
-            if (result.Text == "0")
+            if (result.Text == "0" || result.Text == "Division by 0 is impossible")
             {
                 result.Text = "";
             }
@@ -269,7 +271,7 @@ namespace csharp_project
         }
         private void ButtonNine_Clicked(object sender, EventArgs e)
         {
-            if (result.Text == "0")
+            if (result.Text == "0" || result.Text == "Division by 0 is impossible")
             {
                 result.Text = "";
             }
@@ -281,7 +283,7 @@ namespace csharp_project
         }
         private void ButtonZero_Clicked(object sender,EventArgs e)
         {
-            if (result.Text == "0")
+            if (result.Text == "0" || result.Text == "Division by 0 is impossible")
             {
                 result.Text = "";
             }
@@ -293,6 +295,7 @@ namespace csharp_project
         }
         private void ButtonMore_Clicked(object sender, EventArgs e)
         {
+            player.Play("./assset/sound/gun-dry-firing-11-39784.mp3");
             result.Text += entry.Text;
             if (CheckLastIsSign(result.Text) && result.Text.Length > 1)
             {
@@ -310,6 +313,7 @@ namespace csharp_project
 
         private void ButtonLess_Clicked(object sender, EventArgs e)
         {
+            player.Play("./assset/sound/gun-dry-firing-11-39784.mp3");
             result.Text += entry.Text;
             if (CheckLastIsSign(result.Text) && result.Text.Length > 1)
             {
@@ -325,6 +329,7 @@ namespace csharp_project
         }
         private void ButtonDivide_Clicked(object sender, EventArgs e)
         {
+            player.Play("./assset/sound/gun-dry-firing-11-39784.mp3");
             result.Text += entry.Text;
             if (CheckLastIsSign(result.Text) && result.Text.Length > 1)
             {
@@ -340,6 +345,7 @@ namespace csharp_project
         }
         private void ButtonTimes_Clicked(object sender, EventArgs e)
         {
+            player.Play("./assset/sound/gun-dry-firing-11-39784.mp3");
             result.Text += entry.Text;
             if (CheckLastIsSign(result.Text) && result.Text.Length > 1)
             {
@@ -355,6 +361,7 @@ namespace csharp_project
         }
         private void ButtonMod_Clicked(object sender, EventArgs e)
         {
+            player.Play("./assset/sound/gun-dry-firing-11-39784.mp3");
             result.Text += entry.Text;
             if (CheckLastIsSign(result.Text) && result.Text.Length > 1)
             {
@@ -370,7 +377,7 @@ namespace csharp_project
         }
         private void ButtonEqual_Clicked(object sender, EventArgs e)
         {
-            player.Play("./assset/sound/alarm-police-fire-ambulance-etc-sound-effect-26-11504.mp3");
+            player.Play("./assset/sound/gun-dry-firing-11-39784.mp3");
             if (!CheckLastIsSign(result.Text))
             {
                 result.Text = entry.Text;
@@ -387,6 +394,7 @@ namespace csharp_project
         
         private void ButtonSign_Clicked(object sender, EventArgs e)
         {
+            player.Play("./assset/sound/gun-dry-firing-11-39784.mp3");
             if (result.Text[0] == '-')
             {
                 result.Text = result.Text.Substring(1, result.Text.Length - 1);
@@ -396,6 +404,7 @@ namespace csharp_project
         }
         private void ButtonInverse_Clicked(object sender, EventArgs e)
         {
+            player.Play("./assset/sound/gun-dry-firing-11-39784.mp3");
             if (entry.Text.Contains("/"))
             {
                 entry.Text = Res(entry.Text);
@@ -412,15 +421,18 @@ namespace csharp_project
         }
         private void ButtonClearEntry_Clicked(object sender, EventArgs e)
         {
+            player.Play("./assset/sound/bass-drop.mp3");
             entry.Text = "0";
         }
         private void ButtonClearAll_Clicked(object sender, EventArgs e)
         {
+            player.Play("./assset/sound/bass-drop.mp3");
             result.Text = "0";
             entry.Text = "";
         }
         private void ButtonDel_Clicked(object sender, EventArgs e)
         {
+            player.Play("./assset/sound/bass-drop.mp3");
             if (entry.Text!= "")
             {
                 entry.Text = entry.Text.Substring(0, entry.Text.Length -1);
