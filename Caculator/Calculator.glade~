@@ -21,7 +21,7 @@
             <property name="can-focus">False</property>
             <property name="margin-bottom">20</property>
             <child>
-              <object class="GtkBox" id="screen">
+              <object class="GtkBox">
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
                 <property name="orientation">vertical</property>
