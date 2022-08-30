@@ -11,7 +11,7 @@ namespace CalculatorQuest
         [UI] public Label result, entry;
         [UI] public Button more, less, time, divide, mod, equal, sign = null;
         [UI] public Button zero, one, two, three, four, five, six, seven, eight, nine, point = null;
-        // [UI] public Button clearEntry, clearAll, del;
+        [UI] public Button clearEntry, clearAll, del;
 
         private char[] signs = {'+', '-', 'x', '/', '%'};
         public Calc() : this(new Builder("CalcScreen.glade")) {
@@ -33,9 +33,9 @@ namespace CalculatorQuest
             zero.Clicked += _Display;
             point.Clicked += ButtonPoint_Clicked;
 
-            // clearEntry.Clicked += ButtonClearEntry_Clicked;
-            // clearAll.Clicked += ButtonClearAll_Clicked;
-            // del.Clicked += ButtonDel_Clicked;
+            clearEntry.Clicked += ButtonClearEntry_Clicked;
+            clearAll.Clicked += ButtonClearAll_Clicked;
+            del.Clicked += ButtonDel_Clicked;
 
             more.Clicked += ButtonMore_Clicked;
             less.Clicked += ButtonLess_Clicked;
@@ -273,22 +273,22 @@ namespace CalculatorQuest
             }
             entry.Text = "";
         }
-        // private void ButtonClearEntry_Clicked(object sender, EventArgs e)
-        // {
-        //     entry.Text = "0";
-        // }
-        // private void ButtonClearAll_Clicked(object sender, EventArgs e)
-        // {
-        //     result.Text = "0";
-        //     entry.Text = "";
-        // }
-        // private void ButtonDel_Clicked(object sender, EventArgs e)
-        // {
-        //     if (entry.Text!= "")
-        //     {
-        //         entry.Text = entry.Text.Substring(0, entry.Text.Length -1);
-        //     }
-        // }
+        private void ButtonClearEntry_Clicked(object sender, EventArgs e)
+        {
+            entry.Text = "0";
+        }
+        private void ButtonClearAll_Clicked(object sender, EventArgs e)
+        {
+            result.Text = "0";
+            entry.Text = "";
+        }
+        private void ButtonDel_Clicked(object sender, EventArgs e)
+        {
+            if (entry.Text!= "")
+            {
+                entry.Text = entry.Text.Substring(0, entry.Text.Length -1);
+            }
+        }
 
 
     }
