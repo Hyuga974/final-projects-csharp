@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "pXwUodXumgwNbMb5lMjSFaNhO9LkSl0aIQ/vCHhICL/sCKUUWhPthfqPy2aduQZABYKjFrxuashuWAmY8pg2aw==",
+  "dgSpecHash": "5Ii2llIxz0YXKYuKr2DFL3HfGBY3mXX6E0RFbjieNCUaR2jhng/TCE02OowquUBIt+H1yu3DLDpMuXBSqmj6Jg==",
   "success": true,
   "projectFilePath": "C:\\Users\\reype\\Documents\\YNOV\\Mentor\\csharp-project\\csharp-project.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\reype\\.nuget\\packages\\atksharp\\3.24.24.38\\atksharp.3.24.24.38.nupkg.sha512",
+    "C:\\Users\\reype\\.nuget\\packages\\cairosharp\\3.24.24.38\\cairosharp.3.24.24.38.nupkg.sha512",
+    "C:\\Users\\reype\\.nuget\\packages\\gdksharp\\3.24.24.38\\gdksharp.3.24.24.38.nupkg.sha512",
+    "C:\\Users\\reype\\.nuget\\packages\\giosharp\\3.24.24.38\\giosharp.3.24.24.38.nupkg.sha512",
+    "C:\\Users\\reype\\.nuget\\packages\\glibsharp\\3.24.24.38\\glibsharp.3.24.24.38.nupkg.sha512",
+    "C:\\Users\\reype\\.nuget\\packages\\gtksharp\\3.24.24.38\\gtksharp.3.24.24.38.nupkg.sha512",
+    "C:\\Users\\reype\\.nuget\\packages\\pangosharp\\3.24.24.38\\pangosharp.3.24.24.38.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,55 +1,73 @@
+
 using System;
-using System.Linq;
+using System.Windows;
+using Gtk;
+using UI = Gtk.Builder.ObjectAttribute;
 
-namespace QuestCalc
+namespace CalculatorQuest
 {
-    class Calc
+    class Calc : Window
     {
-        private string[] _signs = {"+", "-", "x", "/", "%"};
-        public Calc(){}
-
-        public string Operator(string value){
-            float nb1 = 0, nb2 = 0, nbSign = 0;
-            string op = "";
-            for (int i = 0; i < _signs.Length; i++){
-                if (nbSign > 1 || value.Split(_signs[i]).Length > 2)
-                {
-                    return "Only one operation please";
-                }
-                if (value.Contains(_signs[i]))
-                {
-                    nbSign ++;
-                    op = _signs[i];
-                }
-                
-            }
-            if (op == ""){
-                return "Please enter an operation";
-            }
-            nb1 = float.Parse(value.Substring(0, value.IndexOf(op)));
-            nb2 = float.Parse(value.Substring(value.IndexOf(op)+1));
-            switch (op){
-                case "+": 
-                    return (nb1 + nb2).ToString();
-                case "-": 
-                    return (nb1 - nb2).ToString();
-                case "x": 
-                    return (nb1 * nb2).ToString();
-                case "/": 
-                    if (nb2 == 0)
-                    {
-                        return "Division by 0 is IMPOSSIBLE";
-                    }
-                    return (nb1 / nb2).ToString();
-                case "%": 
-                    if (nb2 == 0)
-                    {
-                        return "Modulo by 0 is IMPOSSIBLE";
-                    }
-                    return (nb1 % nb2).ToString();
-                default: return ("");
-            }
-            return "";
+        [UI] public Label result = null;
+        [UI] public Button more = null;
+        [UI] public Button less = null;
+        [UI] public Button time = null;
+        [UI] public Button divide = null;
+        [UI] public Button equal = null;
+        [UI] public Button point = null;
+        [UI] public Button zero = null;
+        [UI] public Button one = null;
+        [UI] public Button two = null;
+        [UI] public Button three = null;
+        [UI] public Button four = null;
+        [UI] public Button five = null;
+        [UI] public Button six = null;
+        [UI] public Button seven = null;
+        [UI] public Button eight = null;
+        [UI] public Button nine = null;
+        [UI] public Button mod = null;
+        [UI] public Button clearEntry = null;
+        [UI] public Button clearAll = null;
+        [UI] public Button del = null;
+        public Calc() : this(new Builder("CalcScreen.glade")) {
+            this.result.Text = "";
         }
+        public Calc(Builder builder) : base(builder.GetObject("calc").Handle){
+            builder.Autoconnect(this);
+            DeleteEvent += Window_DeleteEvent;
+
+            one.Clicked += _Display;
+            two.Clicked += _Display;
+            three.Clicked += _Display;
+            four.Clicked += _Display;
+            five.Clicked += _Display;
+            six.Clicked += _Display;
+            seven.Clicked += _Display;
+            eight.Clicked += _Display;
+            nine.Clicked += _Display;
+            zero.Clicked += _Display;
+            point.Clicked += _Display;
+
+            clearEntry.Clicked += _Display;
+            clearAll.Clicked += _Display;
+            del.Clicked += _Display;
+
+            more.Clicked += _Display;
+            less.Clicked += _Display;
+            divide.Clicked += _Display;
+            time.Clicked += _Display;
+    	    mod.Clicked += _Display;
+            equal.Clicked += _Display;
+        }
+
+        private void _Display(object sender, EventArgs e) {
+            result.Text = ((Button) sender).Label;
+        }
+
+        private void Window_DeleteEvent(object sender, DeleteEventArgs a)
+        {
+            Application.Quit();
+        }
+
     }
 }
