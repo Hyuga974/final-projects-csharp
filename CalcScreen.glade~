@@ -31,7 +31,7 @@
         </child>
         <child>
           <!-- n-columns=3 n-rows=7 -->
-          <object class="GtkGrid">
+          <object class="GtkGrid" id="touchButtons">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
             <property name="row-homogeneous">True</property>
