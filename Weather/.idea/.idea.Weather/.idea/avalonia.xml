@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="Weather/App.axaml" value="Weather/Weather.csproj" />
+        <entry key="Weather/SearchCity.axaml" value="Weather/Weather.csproj" />
+        <entry key="Weather/ViewModels/SearchCity.axaml" value="Weather/Weather.csproj" />
+        <entry key="Weather/Views/MainWindow.axaml" value="Weather/Weather.csproj" />
+        <entry key="Weather/Views/MyCity.axaml" value="Weather/Weather.csproj" />
+        <entry key="Weather/Views/SearchCity.axaml" value="Weather/Weather.csproj" />
+        <entry key="Weather/Views/Settings.axaml" value="Weather/Weather.csproj" />
+      </map>
+    </option>
+  </component>
+</project>
